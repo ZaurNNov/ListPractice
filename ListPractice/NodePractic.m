@@ -8,23 +8,7 @@
 
 #import "NodePractic.h"
 
-// Односвязный список
-typedef struct Node {
-    int value;
-    char *name;
-    struct Node *nextNode;
-} Node;
-
-
 @implementation NodePractic
-
--(void) nodePractic {
-    
-    [self mainExample];
-    
-
-    
-}
 
 -(void)example {
     // нод укеазывающий на пустоту
@@ -40,14 +24,14 @@ typedef struct Node {
 }
 
 
--(void) push:(Node **)head data:(int)data {
+-(void)push:(Node **)head data:(int)data {
     Node *temp = (Node *) malloc(sizeof(Node));
     temp->value = data;
     temp->nextNode = (*head);
     (*head) = temp;
 }
 
--(int) pop:(Node **)head {
+-(int)pop:(Node **)head {
     Node *prev = NULL;
     int val;
     
@@ -61,7 +45,7 @@ typedef struct Node {
     return val;
 }
 
--(Node *) getNth:(Node *)head integer:(int)n {
+-(Node *)getNth:(Node *)head integer:(int)n {
     int counter = 0;
     while (counter < n && head) {
         head = head->nextNode;
@@ -70,7 +54,7 @@ typedef struct Node {
     return head;
 }
 
--(Node *) getLast:(Node *)head {
+-(Node *)getLast:(Node *)head {
     if (head == NULL) {
         return NULL;
     }
@@ -80,7 +64,7 @@ typedef struct Node {
     return head;
 }
 
--(void) pushBack:(Node *)head value:(int)value {
+-(void)pushBack:(Node *)head value:(int)value {
     Node *last = [self getLast:head];
     Node *tmp = (Node *) malloc(sizeof(Node));
     
@@ -90,7 +74,7 @@ typedef struct Node {
 }
 
 // вернуть предпоследнего (для удаления последнего - сделать его ссылку на следующитй равной нил)
--(Node *) getLastButOne:(Node *)head {
+-(Node *)getLastButOne:(Node *)head {
     if (head == NULL) {
         exit(-2);
     }
@@ -104,7 +88,7 @@ typedef struct Node {
 }
 
 // удаление последнего
--(void) popBack:(Node **)head {
+-(void)popBack:(Node **)head {
     Node *lastbn = NULL;
     // если нет
     if (!head) {
@@ -127,7 +111,7 @@ typedef struct Node {
     }
 }
 
--(void) popBackFast:(Node **)head {
+-(void)popBackFast:(Node **)head {
     Node *pFwd = NULL; // текущий узел
     Node *pBwd = NULL; // предыдущий узел
     
@@ -156,7 +140,7 @@ typedef struct Node {
     }
 }
 
--(void) insert:(Node *)head uinteger:(uint)integer value:(int)value {
+-(void)insert:(Node *)head uinteger:(uint)integer value:(int)value {
     
     uint i = 0;
     Node *temp = NULL;
@@ -207,7 +191,7 @@ typedef struct Node {
 
 
 // для удобства - создать список из массива
--(void)fromArray:(Node **)head intArr:(NSArray *)arr size:(size_t)size {
+-(void)fromArray:(Node **)head intArr:(int *)arr size:(size_t)size {
     
     size_t i = size - 1;
     if (arr == NULL || size == 0) {
@@ -242,6 +226,7 @@ typedef struct Node {
 }
 
 -(void)mainExample {
+    
     Node *head = NULL;
     int arr[] = { 1, 3, 8, 9, 15, 19, 24, 35, 48, 51 };
     
@@ -254,15 +239,5 @@ typedef struct Node {
     [self insert:head uinteger:4 value:555];
     [self printLinkedList:head];
 }
-
-
-
-
-
-
-
-
-
-
 
 @end
