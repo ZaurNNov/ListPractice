@@ -13,6 +13,7 @@
 		CEB12FE420CBC4D000E60D81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB12FE320CBC4D000E60D81 /* Assets.xcassets */; };
 		CEB12FE720CBC4D000E60D81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB12FE520CBC4D000E60D81 /* LaunchScreen.storyboard */; };
 		CEB12FEA20CBC4D100E60D81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB12FE920CBC4D100E60D81 /* main.m */; };
+		CEB12FF820CBC51400E60D81 /* NodePractic.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB12FF720CBC51400E60D81 /* NodePractic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		CEB12FE620CBC4D000E60D81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEB12FE820CBC4D000E60D81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEB12FE920CBC4D100E60D81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CEB12FF220CBC4E200E60D81 /* NodePractic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodePractic.h; sourceTree = "<group>"; };
+		CEB12FF720CBC51400E60D81 /* NodePractic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodePractic.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				CEB12FE520CBC4D000E60D81 /* LaunchScreen.storyboard */,
 				CEB12FE820CBC4D000E60D81 /* Info.plist */,
 				CEB12FE920CBC4D100E60D81 /* main.m */,
+				CEB12FF220CBC4E200E60D81 /* NodePractic.h */,
+				CEB12FF720CBC51400E60D81 /* NodePractic.m */,
 			);
 			path = ListPractice;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB12FF820CBC51400E60D81 /* NodePractic.m in Sources */,
 				CEB12FDF20CBC4CE00E60D81 /* ViewController.m in Sources */,
 				CEB12FEA20CBC4D100E60D81 /* main.m in Sources */,
 				CEB12FDC20CBC4CE00E60D81 /* AppDelegate.m in Sources */,
